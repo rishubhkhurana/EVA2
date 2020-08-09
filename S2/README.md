@@ -21,3 +21,4 @@ Once we had cleaned dataset, we started working on model. But before building ou
 6. Convert the image to torch tensor 
 7. Normalize the image using mean and standard deviation computed from all images. 
 The code used for this is shown below
+![Preprocess Image] (https://github.com/rishubhkhurana/EVA2/tree/master/S2/Images)
