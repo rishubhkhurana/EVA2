@@ -20,5 +20,15 @@ Once we had cleaned dataset, we started working on model. But before building ou
 5. Crop the image from centre to 224x224
 6. Convert the image to torch tensor 
 7. Normalize the image using mean and standard deviation computed from all images. 
+
 The code used for this is shown below
+
 ![preprocess image](https://github.com/rishubhkhurana/EVA2/blob/master/S2/Images/preprocess.png?raw=true)
+
+#### Model 
+
+We used MobileNet model with only the last classifier layer changed to predict 4 classes instead of 1000 it was trained on. We fixed the weights of all layers except for last classifier layer. To achieve this, we built a custom model using following code
+
+
+
+
