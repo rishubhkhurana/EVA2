@@ -12,7 +12,7 @@ function uploadAndClassifyImageRes(){
         aync: true,
         crossDomain: true,
         method: 'POST',
-        url: 'https://xxxxxxx.execute-api.ap-south-1.amazonaws.com/dev/classify',
+        url: 'https://xxx.execute-api.ap-south-1.amazonaws.com/dev/classify',
         data: formData,
         processData: false,
         contentType: false,
@@ -42,7 +42,7 @@ function uploadAndClassifyImageMobile(){
         aync: true,
         crossDomain: true,
         method: 'POST',
-        url: 'https://xxxxxxx.execute-api.ap-south-1.amazonaws.com/dev/classify',
+        url: 'https://xxx.execute-api.ap-south-1.amazonaws.com/dev/classify',
         data: formData,
         processData: false,
         contentType: false,
@@ -72,18 +72,20 @@ function alignImage(){
         aync: true,
         crossDomain: true,
         method: 'POST',
-        url: 'https://xxxxxx.execute-api.ap-south-1.amazonaws.com/dev/classify',
+        url: 'https://xxx.execute-api.ap-south-1.amazonaws.com/dev/align',
         data: formData,
         processData: false,
         contentType: false,
+        dataType: 'json',
         mimeType: "multipart/form-data"
     })
     .done(function (response){
         console.log(response);
-        document.getElementById('imageresult').src = response;
+        console.log(response["image"])
+        document.getElementById('imageresult').src=response['image'];
     })
     .fail(function(){
-        alert ("There was error while sending prediction request to mobile model.");
+        alert ("There was error while sending prediction request to align.");
     });
 };
 
@@ -114,7 +116,7 @@ function swapImage(){
         aync: true,
         crossDomain: true,
         method: 'POST',
-        url: 'https://xxxxx.execute-api.ap-south-1.amazonaws.com/dev/classify',
+        url: 'https://xxx.execute-api.ap-south-1.amazonaws.com/dev/classify',
         data: formData,
         processData: false,
         contentType: false,
