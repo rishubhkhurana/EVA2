@@ -1,0 +1,46 @@
+<DOCTYPE html>
+<html lang='en' dir='ltr'>
+    <head>
+        <meta charset='utf-8'>
+        <title>"Image Classifier"</title>
+    </head>
+    <body>
+        <div class='grid-x grid-margin-x' style='margin-top:2%;'>
+            <div class='large-l2 cell'>
+                <h4 id='resnetimageClassifiers'>ResNet Classifier</h4>
+            </div>
+            <div class='large-4 cell'>
+                <label for='resnet34FileUpload'>Please choose image file you want to classify.</label>
+                <input type='file' id='resnet34FileUpload'>  
+            </div>
+            <div class='large-8 cell'>
+                <input type='button' id='btnResNetUpload' class='button' value='Classify Image'>
+            </div>
+            <p id='resnetresult'></p>
+            <div class='large-l2 cell'>
+                <h4 id='mobilenetimageClassifiers'>MobileNet Classifier</h4>
+            </div>
+            <div class='large-4 cell'>
+                <label for='mobilenetFileUpload'>Please choose image file you want to classify.</label>
+                <input type='file' id='mobilenetFileUpload'>  
+            </div>
+            <div class='large-8 cell'>
+                <input type='button' id='btnMobileNetUpload' class='button' value='Classify Image'>
+            </div>
+            <p id='mobilenetresult'></p>
+            <div class='large-l2 cell'>
+                <h4 id='facealignment'>Face Alignment</h4>
+            </div>
+            <div class='large-4 cell'>
+                <label for='facealignment'>Please choose image file for face alignment.</label>
+                <input type='file' id='alignFileUpload'>  
+            </div>
+            <div class='large-8 cell'>
+                <input type='button' id='btnalignUpload' class='button' value='Align Image'>
+            </div>
+            <img id='imageresult' src='temp.jpg' alt='aligned image will be displayed here'></p>
+        </div>
+    </body>
+    <script src='js/jquery-3.3.1.min.js'></script>
+    <script src='js/upload.js'></script>
+</html>
